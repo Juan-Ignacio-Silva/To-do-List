@@ -7,27 +7,42 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section>
+    <section class="main-container">
         <header>
-            <h1>Lista de tareas</h1>
+            <h1>Lista de notas</h1>
         </header>
         <main>
             <div class="contenedor-form">
-                <h2>Agregar tareas</h2>
-                <form id="form-tareas">
-                    <label for="title">Titulo tarea</label>
-                    <input type="text" id="task-input" placeholder="Escribe el titulo de la tarea" name="title" required>
-                    <label for="description">Descripción tarea</label>
-                    <input type="text" id="description-input" placeholder="Escribe la descripción de la tarea" name="description" required>
-                    <label for="name-user">Nombre de usuario</label>
-                    <input type="text" id="name-user-input" placeholder="Escribe tu nombre" name="name-user" required>
-                    <button type="submit">Agregar tarea</button>
+                <div class="header-form">
+                    <h2>Crear nota</h2>
+                </div>
+                <form id="form-nota" class="formulario">
+                    <label for="date">Fecha de creación</label>
+                    <input type="date" id="date" name="date" required>
+                    <label for="title">Titulo</label>
+                    <input type="text" id="title" name="title" placeholder="Título de la nota" required>
+                    <label for="description">Descripción</label>
+                    <textarea id="description" name="description" placeholder="Descripción de la nota" required></textarea>
+                    <label for="name_user">Nombre de usuario</label>
+                    <input type="text" id="name_user" name="name_user" placeholder="Nombre de usuario" required>
+                    <button type="submit" id="btn-crear-tarea">Crear nota</button>
                 </form>
             </div>
-            <section>
-                <!-- Aca se va a generar las card de cada tarea nueva-->
-            </section>
         </main>
+        <section class="contenedor-listas" id="contenedor-listas">
+            <!-- Aca se genera el JS de las notas -->
+        </section>
+        <footer>
+            <p>Desarrollado por <strong>Juan Igancio Silva</strong></p>
+        </footer>
     </section>
+
+    <div class="modal-nota" id="modal-nota">
+        <div class="modal-content">
+            
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
