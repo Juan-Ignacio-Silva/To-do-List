@@ -244,19 +244,38 @@ footer {
     font-size: 19px;
 }
 
-.modal-content span {
+.footer-modal {
     position: absolute;
     bottom: 0;
-    margin-bottom: 20px;
     font-size: 13px;
-    background-color: #23262b;
+    background-color: #23262b; 
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-modal span {
+    font-size: 13px;
+    background-color: var(---background-color);
     padding: 5px;
     width: 80px;
     border-radius: 5px;
     text-align: center;
-    margin-left: 20px;
 }
 
+.borrar-btn {
+    background-color: transparent;
+    border: 1px solid var(---background-color);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.borrar-btn img {
+    width: 20px;
+}
 
 /* Media Queries */
 
